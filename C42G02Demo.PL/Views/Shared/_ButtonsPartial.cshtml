@@ -1,0 +1,18 @@
+﻿@model string
+
+<td>
+    <a asp-action="Details" asp-route-id="@Model" class="btn btn-info">
+        <i class="fa fa-eye" aria-hidden="true"></i> @* Details *@
+    </a>
+</td>
+<td>
+    <a asp-action="Edit" asp-route-id="@Model" class="btn btn-success">
+        <i class="fa fa-pencil-square" aria-hidden="true"></i> @* Update *@
+    </a>
+</td>
+
+<td>
+    <a asp-action="Delete" asp-route-id="@Model" class="btn btn-danger">
+        <i class="fa fa-trash" aria-hidden="true"></i> @* Delete *@
+    </a>
+</td>

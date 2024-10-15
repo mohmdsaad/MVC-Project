@@ -1,0 +1,39 @@
+﻿@model EmployeeViewModel
+
+<div class="card-header">
+    <h4>Employee Informations</h4>
+</div>
+
+<div>
+    <img src="~/Files/Images/@Model.ImageName" class="rounded" height="100" width="100" alt="Employee Image" class="m-4"/>
+    <input asp-for="ImageName" hidden/>
+</div>
+
+<div class="card-body">
+    <dl class="row">
+        <dt class="col-sm-3">Name</dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.Name)</dd>
+
+        <dt class="col-sm-3">Age<dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.age)</dd>
+
+        <dt class="col-sm-3">Salary<dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.Salary)</dd>
+        
+        <dt class="col-sm-3">Department<dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.Department)</dd>
+        <br />
+               
+        <dt class="col-sm-3">Address<dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.Address)</dd>
+
+        <dt class="col-sm-3">Email<dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.Email)</dd>
+
+        <dt class="col-sm-3">PhoneNumber<dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.PhoneNumber)</dd>
+
+        <dt class="col-sm-3">HireDate<dt>
+        <dd class="col-sm-9">@Html.DisplayFor(model => model.HireDate)</dd>
+    </dl>
+</div>

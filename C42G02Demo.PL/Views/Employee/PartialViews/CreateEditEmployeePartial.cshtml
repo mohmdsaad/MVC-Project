@@ -1,0 +1,69 @@
+﻿@model EmployeeViewModel
+@{
+    // var departments = new SelectList(ViewBag.Departments, "Id", "Name");
+    var departments = ViewBag.Departments != null
+        ? new SelectList(ViewBag.Departments, "Id", "Name")
+        : Enumerable.Empty<SelectListItem>();
+}
+
+<input asp-for="ImageName" hidden/>
+
+<div>
+    <label asp-for="Name" class="control-label"></label>
+    <input type="text" asp-for="Name" class="form-control" />
+    <span asp-validation-for="Name" class="text-danger"></span>
+</div>
+
+<div>
+    <label asp-for="Image" class="col-form-label"></label>
+    <input asp-for="Image" class="form-control" />
+</div>
+
+<div>
+    <label asp-for="age" class="control-label"></label>
+    <input type="text" asp-for="age" class="form-control" />
+    <span asp-validation-for="age" class="text-danger"></span>
+</div>
+
+<div>
+    <label asp-for="Salary" class="control-label"></label>
+    <input asp-for="Salary" class="form-control" type="text" />
+    <span asp-validation-for="Salary" class="text-danger"></span>
+</div>
+
+<div>
+    <label asp-for="Address" class="control-label"></label>
+    <input asp-for="Address" class="form-control" type="text" />
+    <span asp-validation-for="Address" class="text-danger"></span>
+</div>
+
+<div>
+    <label asp-for="Department" class="control-label"></label>
+    <select class="form-control" asp-items="departments" asp-for="DepartmentId">
+        <option value="@null"> -------- Select Department -------- </option>
+    </select>
+</div>
+
+<div>
+    <label asp-for="Email" class="control-label"></label>
+    <input asp-for="Email" class="form-control" type="text" />
+    <span asp-validation-for="Email" class="text-danger"></span>
+</div>
+
+<div>
+    <label asp-for="PhoneNumber" class="control-label"></label>
+    <input asp-for="PhoneNumber" class="form-control" type="text" />
+    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+</div>
+
+<div>
+    <label asp-for="HireDate" class="control-label"></label>
+    <input asp-for="HireDate" class="form-control" type="date" />
+    <span asp-validation-for="HireDate" class="text-danger"></span>
+</div>
+
+<div class="form-check">
+    <input asp-for="IsActive" class="form-check-input me-2" type="checkbox" />
+    <label asp-for="IsActive" class="form-check-label"></label>
+    <span asp-validation-for="IsActive" class="text-danger"></span>
+</div>

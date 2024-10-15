@@ -1,0 +1,19 @@
+﻿@model Department
+
+<div>
+    <label asp-for="Code" class="control-label"></label>
+    <input type="text" asp-for="Code" class="form-control" />
+    <span asp-validation-for="Code" class="text-danger"></span>
+</div>
+
+<div>
+    <label asp-for="Name" class="control-label"></label>
+    <input type="text" asp-for="Name" class="form-control" />
+    <span asp-validation-for="Name" class="text-danger"></span>
+</div>
+
+<div>
+    <label asp-for="DateOfCreation" class="control-label"></label>
+    <input asp-for="DateOfCreation" class="form-control" type="date" />
+    <span asp-validation-for="DateOfCreation" class="text-danger"></span>
+</div>
